@@ -1,0 +1,5289 @@
+{
+    "generation": 5,
+    "digits": 2,
+    "max_adders": 10000,
+    "birth_rate": 2,
+    "involute_rate": 0.3,
+    "adder_len": 506,
+    "adders": [
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                3
+            ],
+            "score": 4
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                3
+            ],
+            "score": 4
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                3
+            ],
+            "score": 4
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                3
+            ],
+            "score": 4
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                1,
+                4
+            ],
+            "score": 4
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                1
+            ],
+            "score": 4
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                1
+            ],
+            "score": 4
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                3
+            ],
+            "score": 4
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                3
+            ],
+            "score": 4
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                3
+            ],
+            "score": 4
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                3
+            ],
+            "score": 4
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                3
+            ],
+            "score": 4
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                3
+            ],
+            "score": 4
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                3
+            ],
+            "score": 4
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                3
+            ],
+            "score": 4
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                3
+            ],
+            "score": 4
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                3
+            ],
+            "score": 4
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                3
+            ],
+            "score": 4
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                1,
+                4
+            ],
+            "score": 4
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                1,
+                4
+            ],
+            "score": 4
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                1,
+                4
+            ],
+            "score": 4
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                1
+            ],
+            "score": 4
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                1
+            ],
+            "score": 4
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                1
+            ],
+            "score": 4
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                1
+            ],
+            "score": 4
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                1
+            ],
+            "score": 4
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                1,
+                2
+            ],
+            "score": 4
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                3
+            ],
+            "score": 4
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                3,
+                4
+            ],
+            "score": 4
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                1
+            ],
+            "score": 4
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                3
+            ],
+            "score": 4
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                1
+            ],
+            "score": 4
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                1
+            ],
+            "score": 4
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                1,
+                2
+            ],
+            "score": 4
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                3,
+                2
+            ],
+            "score": 4
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                3,
+                2
+            ],
+            "score": 4
+        },
+        {
+            "digits": 2,
+            "gate_len": 1,
+            "gates": [
+                4
+            ],
+            "connections": [
+                1,
+                4,
+                0,
+                0
+            ],
+            "score": 4
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                3,
+                1
+            ],
+            "score": 4
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                3,
+                1
+            ],
+            "score": 4
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                3,
+                2
+            ],
+            "score": 4
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                1,
+                2
+            ],
+            "score": 4
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                3,
+                2
+            ],
+            "score": 4
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                3,
+                4
+            ],
+            "score": 4
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                1,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                1,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                3,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                3,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                1,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                1,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                1,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                1,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                1,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                3,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                3,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                3,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                3,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                1,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                3,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                1,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                3,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                1,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 1,
+            "gates": [
+                2
+            ],
+            "connections": [
+                3,
+                0,
+                3,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                3,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                3,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 1,
+            "gates": [
+                1
+            ],
+            "connections": [
+                2,
+                0,
+                3,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                1,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                1,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                1,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                1,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                1,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                3,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                1,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                3,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                3,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                3,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                3,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 1,
+            "gates": [
+                4
+            ],
+            "connections": [
+                4,
+                0,
+                0,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                1,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 1,
+            "gates": [
+                4
+            ],
+            "connections": [
+                2,
+                0,
+                0,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                1,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 1,
+            "gates": [
+                2
+            ],
+            "connections": [
+                4,
+                0,
+                0,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                1,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                1,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                1,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 1,
+            "gates": [
+                4
+            ],
+            "connections": [
+                4,
+                0,
+                0,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                1,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                1,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                3,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                1,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                1,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 1,
+            "gates": [
+                1
+            ],
+            "connections": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                1,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                1,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                1,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                3,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                3,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                3,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                3,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                3,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                3,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                3,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                3,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                1,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                1,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                1,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                3,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                3,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 1,
+            "gates": [
+                2
+            ],
+            "connections": [
+                1,
+                0,
+                0,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                1,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                1,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                3,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                1,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 1,
+            "gates": [
+                2
+            ],
+            "connections": [
+                3,
+                0,
+                5,
+                3
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                3,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 1,
+            "gates": [
+                1
+            ],
+            "connections": [
+                3,
+                0,
+                0,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 1,
+            "gates": [
+                4
+            ],
+            "connections": [
+                2,
+                0,
+                0,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 1,
+            "gates": [
+                4
+            ],
+            "connections": [
+                0,
+                2,
+                3,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                3,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                3,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                3,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                3,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 1,
+            "gates": [
+                3
+            ],
+            "connections": [
+                0,
+                5,
+                0,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 1,
+            "gates": [
+                2
+            ],
+            "connections": [
+                3,
+                0,
+                0,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                3,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                3,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                1,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 1,
+            "gates": [
+                4
+            ],
+            "connections": [
+                2,
+                0,
+                0,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                1,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 1,
+            "gates": [
+                4
+            ],
+            "connections": [
+                2,
+                0,
+                0,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 1,
+            "gates": [
+                4
+            ],
+            "connections": [
+                2,
+                0,
+                0,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                3,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                1,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                3,
+                0
+            ],
+            "score": 3
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                1
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 1,
+            "gates": [
+                4
+            ],
+            "connections": [
+                0,
+                1,
+                0,
+                0
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                1
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                1
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                2
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                1
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                2
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 1,
+            "gates": [
+                4
+            ],
+            "connections": [
+                0,
+                1,
+                0,
+                0
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                2
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 1,
+            "gates": [
+                1
+            ],
+            "connections": [
+                0,
+                1,
+                0,
+                0
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 1,
+            "gates": [
+                4
+            ],
+            "connections": [
+                0,
+                1,
+                0,
+                0
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                2
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                2
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                2
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                2
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 1,
+            "gates": [
+                2
+            ],
+            "connections": [
+                0,
+                0,
+                4,
+                0
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                4
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                1
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                2
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                3
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                4
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                3
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                1,
+                1
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                2
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                2
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                1,
+                1
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                2
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                2
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                4
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                2
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                4
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                4
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                1,
+                1
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 1,
+            "gates": [
+                1
+            ],
+            "connections": [
+                0,
+                1,
+                0,
+                0
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 1,
+            "gates": [
+                4
+            ],
+            "connections": [
+                0,
+                1,
+                0,
+                0
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                1,
+                1
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                1
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                1
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                1
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                1
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                1
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                2
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                1,
+                1
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                2
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 1,
+            "gates": [
+                4
+            ],
+            "connections": [
+                0,
+                1,
+                0,
+                0
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 1,
+            "gates": [
+                4
+            ],
+            "connections": [
+                0,
+                1,
+                0,
+                0
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 2,
+            "gates": [
+                4,
+                3
+            ],
+            "connections": [
+                0,
+                1,
+                0,
+                0,
+                0,
+                0
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                2
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 1,
+            "gates": [
+                1
+            ],
+            "connections": [
+                0,
+                2,
+                0,
+                0
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 1,
+            "gates": [
+                1
+            ],
+            "connections": [
+                0,
+                1,
+                0,
+                0
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 1,
+            "gates": [
+                4
+            ],
+            "connections": [
+                0,
+                1,
+                0,
+                0
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 1,
+            "gates": [
+                4
+            ],
+            "connections": [
+                0,
+                1,
+                0,
+                0
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                2
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 1,
+            "gates": [
+                1
+            ],
+            "connections": [
+                0,
+                2,
+                0,
+                0
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                2
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                4
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                2
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                2
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                2
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                2
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 1,
+            "gates": [
+                2
+            ],
+            "connections": [
+                0,
+                0,
+                4,
+                0
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 1,
+            "gates": [
+                2
+            ],
+            "connections": [
+                0,
+                0,
+                4,
+                0
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                4
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                1
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                1
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                1
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                2
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                2
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                3
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                1
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                3
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                4
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                4
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                2,
+                2
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                3
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                1,
+                1
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                1,
+                1
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                2
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                2
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                1
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                1
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                2
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                3
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                2
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                3
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                2
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                2
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                3
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                2
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                3
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                4,
+                2
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                3
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 1,
+            "gates": [
+                2
+            ],
+            "connections": [
+                0,
+                0,
+                4,
+                0
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                2
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                2
+            ],
+            "score": 2
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 1,
+            "gates": [
+                4
+            ],
+            "connections": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 1,
+            "gates": [
+                4
+            ],
+            "connections": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 1,
+            "gates": [
+                2
+            ],
+            "connections": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 1,
+            "gates": [
+                4
+            ],
+            "connections": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 1,
+            "gates": [
+                4
+            ],
+            "connections": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 1,
+            "gates": [
+                3
+            ],
+            "connections": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 1,
+            "gates": [
+                2
+            ],
+            "connections": [
+                0,
+                0,
+                3,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 1,
+            "gates": [
+                3
+            ],
+            "connections": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 1,
+            "gates": [
+                3
+            ],
+            "connections": [
+                0,
+                0,
+                1,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 1,
+            "gates": [
+                4
+            ],
+            "connections": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 1,
+            "gates": [
+                2
+            ],
+            "connections": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 1,
+            "gates": [
+                4
+            ],
+            "connections": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 1,
+            "gates": [
+                2
+            ],
+            "connections": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 1,
+            "gates": [
+                2
+            ],
+            "connections": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 1,
+            "gates": [
+                4
+            ],
+            "connections": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 1,
+            "gates": [
+                3
+            ],
+            "connections": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 2,
+            "gates": [
+                3,
+                3
+            ],
+            "connections": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 1,
+            "gates": [
+                2
+            ],
+            "connections": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        },
+        {
+            "digits": 2,
+            "gate_len": 0,
+            "gates": [],
+            "connections": [
+                0,
+                0
+            ],
+            "score": 1
+        }
+    ]
+}
