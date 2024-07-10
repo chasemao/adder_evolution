@@ -58,8 +58,7 @@ class world:
         return random.choices([base, base + 1], [base_rate, 1 - base_rate])[0]
     
     def run(self):
-        #while True:
-        for _ in range(100):
+        while True:
             # Give birth and involute
             total = len(self.adders)
             for i in range(total):
