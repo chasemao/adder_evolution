@@ -1,5 +1,6 @@
 from typing import List, Mapping
 import random
+import uuid
 from adder_evolution.gate import gate
 
 class adder:
@@ -21,6 +22,9 @@ class adder:
         # So the valid value is [0, 7], 0 means connected with nothing, [1, 4] means connected with inputs of addr, [5, 7] means connected with outputs of gates
         self.connections = connections
         self.score = 0
+        self.name = str(uuid.uuid4())
+        self.parent = ""
+        self.generation = 0
         
     def dfs(self, cache: List[str], input: str, index: int, history: Mapping[int,bool]) -> str:
         # Index is output of adder or input of gates
@@ -87,18 +91,36 @@ class adder:
     def get_score(self) -> int:
         return self.score
     
+    def count_gates(self) -> int:
+        return len(self.gates)
+    
+    def get_generation(self) -> int:
+        return self.generation
+    
     def involute(self, rate: float) -> 'adder':
         new_one = adder(self.digits, self.gates.copy(), self.connections.copy())
+        new_one.parent = self.name
+        new_one.generation = self.generation + 1
         
-        # Involute gates
-        fewer_rate = rate * rate
-        base = 1 - 2 * fewer_rate
-        delta_gate = random.choices([-1, 0, 1], [fewer_rate, base, fewer_rate])[0]
-        
-        if delta_gate > 0:
+        # Involute add gates
+        involution_rate = rate
+        while random.random() < involution_rate:
+            involution_rate *= involution_rate
             new_one.gates.append(gate.newRandomGate())
-        elif delta_gate < 0 and len(new_one.gates) > 0:
-            del new_one.gates[random.randint(0, len(new_one.gates) - 1)]
+            
+        # Involute del gates
+        involution_rate = rate
+        while random.random() < involution_rate and len(new_one.gates) > 0:
+            involution_rate *= involution_rate
+            del_index = random.randint(0, len(new_one.gates) - 1)
+            del new_one.gates[del_index]
+            del_val1 = 1 + 2 * new_one.digits + 2 * del_index
+            del_val2 = del_val1 + 1
+            for i in range(len(new_one.connections)):
+                if new_one.connections[i] in [del_val1, del_val2]:
+                    new_one.connections[i] = 0
+                elif new_one.connections[i] > del_val2:
+                    new_one.connections[i] -= 2
             
         # Ensure connetions length
         count_connections = len(new_one.connections)
@@ -121,11 +143,14 @@ class adder:
         for g in self.gates:
             gates.append(gate.packJSON(g))
         return {
+            "name": self.name,
+            "parent": self.parent,
+            "generation": self.generation,
             self.digits_field_name: self.digits,
+            self.score_field_name: self.score,
             "gate_len": len(self.gates),
             self.gates_feild_name: gates,
             self.connection_field_name: self.connections,
-            self.score_field_name: self.score,
         }
     
     def unpackJSON(self, d) -> 'adder':

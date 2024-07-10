@@ -1,7 +1,9 @@
-from typing import List, Tuple
+from typing import List
+import os
 import json
 import math
 import random
+import time
 from adder_evolution.gate import gate
 from adder_evolution.adder import adder
 
@@ -49,33 +51,36 @@ class world:
                 res.append([i,j,o])
         return res
 
-    def give_birth(self, index: int, total: int) -> int:
-        bonus = 1 - index / total
-        bonus = bonus * bonus
-        rate = self.birth_rate + bonus
+    def give_birth(self, addvantage: int) -> int:
+        rate = self.birth_rate + 0.1 * float(addvantage)
         base = math.floor(rate)
         base_rate = base + 1 - rate
         return random.choices([base, base + 1], [base_rate, 1 - base_rate])[0]
     
+    def addvantage(self, one: adder) -> float:
+        return one.get_score()
+
     def run(self):
+        random.seed(time.time())
         while True:
             # Give birth and involute
-            total = len(self.adders)
-            for i in range(total):
-                childs = self.give_birth(i, total)
+            for i in range(len(self.adders)):
+                one_adder = self.adders[i]
+                adv = self.addvantage(one_adder)
+                childs = self.give_birth(adv)
                 for _ in range(childs):
-                    self.adders.append(self.adders[i].involute(self.involute_rate))
+                    self.adders.append(one_adder.involute(self.involute_rate))
                     
             # Some die
             challenge_results = []
             for one_adder in self.adders:
                 one_adder.challenge(self.challanges)
-            self.adders = sorted(self.adders, key=lambda x: x.get_score(), reverse=True)
+            self.adders = sorted(self.adders, key=lambda x: (self.addvantage(x), x.get_generation()), reverse=True)
             if len(self.adders) > self.max_adders:
                 self.adders = self.adders[:self.max_adders]
                 challenge_results = challenge_results[:self.max_adders]
             
-            # save to file
+            # Save to file
             self.generation += 1
             data = {
                 self.generation_field_name: self.generation,
@@ -87,8 +92,13 @@ class world:
             }
             for one_adder in self.adders:
                 data[self.adders_field_name].append(one_adder.packJSON())
-            file_path = 'save/' + str(self.generation) + ".json"
+            current_dir = os.path.dirname(os.path.abspath(__file__))
+            directory = os.path.join(current_dir, '../save')
+            os.makedirs(directory, exist_ok=True)
+            file_path = os.path.join(directory, str(self.generation) + ".json")
             # Write JSON data to the file
             with open(file_path, 'w') as json_file:
                 json.dump(data, json_file, indent=4)
-            print("Finish generation=",self.generation)
+            print("Finish generation:",self.generation, 
+                  "max advantage:", self.addvantage(self.adders[0]),
+                  "min advantage:", self.addvantage(self.adders[-1]))
