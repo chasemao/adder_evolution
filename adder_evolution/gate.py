@@ -36,5 +36,5 @@ class gate:
     def packJSON(self):
         return self.type
     
-    def unpackJSON(self, d) -> 'gate':
+    def unpackJSON(d) -> 'gate':
         return gate(d)

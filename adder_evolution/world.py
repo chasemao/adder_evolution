@@ -19,7 +19,9 @@ class world:
         generation = 0
         adders = [adder(digits,[],[])]
         if save_file != "":
-            with open(save_file, 'r') as file:
+            current_dir = os.path.dirname(os.path.abspath(__file__))
+            f = os.path.join(current_dir, save_file)
+            with open(f, 'r') as file:
                 data = json.load(file)
             generation = data[self.generation_field_name]
             digits = data[self.digits_field_name]
@@ -29,15 +31,13 @@ class world:
             adders = []
             for adder_data in data[self.adders_field_name]:
                 adders.append(adder.unpackJSON(adder_data))
-                
+        
         self.generation = generation
         self.digits = digits
         self.max_adders = max_adders
         self.birth_rate = birth_rate
         self.involute_rate = invloute_rate
-        
         self.adders = adders
-        
         self.challanges = self.genChallages()
         
     # generate challage for adder, for exapmle [[1,1,2], [2,2,4], [1,2,3]]
@@ -57,8 +57,11 @@ class world:
         base_rate = base + 1 - rate
         return random.choices([base, base + 1], [base_rate, 1 - base_rate])[0]
     
-    def addvantage(self, one: adder) -> float:
-        return one.get_score()
+    def advantage(self, one: adder) -> float:
+        sc =  one.get_score()
+        if sc == 2 ** (2 * self.digits):
+            sc -= 0.01 * one.count_gates()
+        return sc
 
     def run(self):
         random.seed(time.time())
@@ -66,7 +69,7 @@ class world:
             # Give birth and involute
             for i in range(len(self.adders)):
                 one_adder = self.adders[i]
-                adv = self.addvantage(one_adder)
+                adv = self.advantage(one_adder)
                 childs = self.give_birth(adv)
                 for _ in range(childs):
                     self.adders.append(one_adder.involute(self.involute_rate))
@@ -75,7 +78,7 @@ class world:
             challenge_results = []
             for one_adder in self.adders:
                 one_adder.challenge(self.challanges)
-            self.adders = sorted(self.adders, key=lambda x: (self.addvantage(x), x.get_generation()), reverse=True)
+            self.adders = sorted(self.adders, key=lambda x: (self.advantage(x), x.get_generation()), reverse=True)
             if len(self.adders) > self.max_adders:
                 self.adders = self.adders[:self.max_adders]
                 challenge_results = challenge_results[:self.max_adders]
@@ -100,5 +103,5 @@ class world:
             with open(file_path, 'w') as json_file:
                 json.dump(data, json_file, indent=4)
             print("Finish generation:",self.generation, 
-                  "max advantage:", self.addvantage(self.adders[0]),
-                  "min advantage:", self.addvantage(self.adders[-1]))
+                  "max advantage:", self.advantage(self.adders[0]),
+                  "min advantage:", self.advantage(self.adders[-1]))

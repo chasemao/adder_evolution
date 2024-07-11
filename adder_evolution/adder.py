@@ -8,6 +8,9 @@ class adder:
     gates_feild_name = "gates"
     connection_field_name = "connections"
     score_field_name = "score"
+    generation_field_name = "generation"
+    name_field_name = "name"
+    parent_field_name = "parent"
     
     def __init__(self, digits: int, gates: List[gate], connections: List[int]):
         self.digits = digits
@@ -143,9 +146,9 @@ class adder:
         for g in self.gates:
             gates.append(gate.packJSON(g))
         return {
-            "name": self.name,
-            "parent": self.parent,
-            "generation": self.generation,
+            self.name_field_name: self.name,
+            self.parent_field_name: self.parent,
+            self.generation_field_name: self.generation,
             self.digits_field_name: self.digits,
             self.score_field_name: self.score,
             "gate_len": len(self.gates),
@@ -153,12 +156,15 @@ class adder:
             self.connection_field_name: self.connections,
         }
     
-    def unpackJSON(self, d) -> 'adder':
-        digits = d[self.digits_field_name]
+    def unpackJSON(d) -> 'adder':
+        digits = d[adder.digits_field_name]
         gates = []
-        for gate_data in d[self.gates_feild_name]:
+        for gate_data in d[adder.gates_feild_name]:
             gates.append(gate.unpackJSON(gate_data))
-        connections = d[self.connection_field_name]
+        connections = d[adder.connection_field_name]
         a =  adder(digits, gates, connections)
-        a.score = d[self.score_field_name]
+        a.score = d[adder.score_field_name]
+        a.generation = d[adder.generation_field_name]
+        a.name = d[adder.name_field_name]
+        a.parent = d[adder.parent_field_name]
         return a
