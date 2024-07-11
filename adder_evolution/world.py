@@ -15,7 +15,7 @@ class world:
     involute_rate_field_name = "involute_rate"
     adders_field_name = "adders"
     
-    def __init__(self, digits: int, max_adders: int, birth_rate: float, invloute_rate: float, save_file: str = ""):
+    def __init__(self, digits: int, max_adders: int, birth_rate: float, invloute_rate: float, save_interval: int, save_file: str = ""):
         generation = 0
         adders = [adder(digits,[],[])]
         if save_file != "":
@@ -39,6 +39,8 @@ class world:
         self.involute_rate = invloute_rate
         self.adders = adders
         self.challanges = self.genChallages()
+        self.save_interval = save_interval
+        self.save_index = 0
         
     # generate challage for adder, for exapmle [[1,1,2], [2,2,4], [1,2,3]]
     def genChallages(self) -> List[List[int]]: 
@@ -83,8 +85,19 @@ class world:
                 self.adders = self.adders[:self.max_adders]
                 challenge_results = challenge_results[:self.max_adders]
             
-            # Save to file
+            # Print log
             self.generation += 1
+            print("Finish generation:",self.generation, 
+                  "max advantage:", self.advantage(self.adders[0]),
+                  "min advantage:", self.advantage(self.adders[-1]))
+            
+            # Save to file
+            if self.save_interval <= 0:
+                continue
+            self.save_index += 1
+            if self.save_index < self.save_interval:
+                continue
+            self.save_index = 0
             data = {
                 self.generation_field_name: self.generation,
                 self.digits_field_name: self.digits,
@@ -102,6 +115,3 @@ class world:
             # Write JSON data to the file
             with open(file_path, 'w') as json_file:
                 json.dump(data, json_file, indent=4)
-            print("Finish generation:",self.generation, 
-                  "max advantage:", self.advantage(self.adders[0]),
-                  "min advantage:", self.advantage(self.adders[-1]))
