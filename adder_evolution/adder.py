@@ -1,87 +1,131 @@
 from typing import List, Mapping
 import random
 import uuid
+import copy
 from adder_evolution.gate import gate
 
+class connect:
+    type_none = 0
+    type_input1 = 1
+    type_input2 = 2
+    type_gate = 3
+    
+    type_field_name = "type"
+    index_field_name = "index"
+    
+    def __init__(self, type: int, index: int):
+        self.type = type
+        self.index = index
+        
+    def get_type(self) -> int:
+        return self.type
+    
+    def get_index(self) -> int:
+        return self.index
+    
+    def set_index(self, index: int):
+        self.index = index
+        
+    def new_random_connect(gate_len: int, output_len: int) -> "connect":
+        n = random.random()
+        if n < 0.25:
+            return connect(connect.type_none, 0)
+        elif n < 0.5:
+            return connect(connect.type_input1, random.randint(0, max(0,output_len-1)))
+        elif n < 0.75:
+            return connect(connect.type_input2, random.randint(0, max(0,output_len-1)))
+        else:
+            return connect(connect.type_gate, random.randint(0, max(0,gate_len-1)))
+        
+    def packJSON(self):
+        return {
+            connect.type_field_name: self.type,
+            connect.index_field_name: self.index,
+        }
+        
+    def unpackJSON(self, d) -> "connect":
+        return connect(d[connect.type_field_name], d[connect.index_field_name])
+        
+        
+    def __hash__(self):
+        return hash((self.type, self.index))
+
+    def __eq__(self, other):
+        if isinstance(other, connect):
+            return (self.type, self.index) == (other.type, other.index)
+        return False
+
 class adder:
-    digits_field_name = "digits"
     gates_feild_name = "gates"
-    connection_field_name = "connections"
+    gate_connection_field_name = "gate_connections"
+    output_connection_field_name = "output_connections"
     score_field_name = "score"
     generation_field_name = "generation"
     name_field_name = "name"
     parent_field_name = "parent"
     
-    def __init__(self, digits: int, gates: List[gate], connections: List[int]):
-        self.digits = digits
+    def __init__(self, gates: List[gate], gate_connections: List[List[connect]],
+                 output_connections: List[connect]):
         self.gates = gates
-        # Connection's index is output of adder and inputs of gates
-        # For example, digits = 2, gates.len = 3
-        # There will be 3 output of adder, and 6 inputs of gates
-        # So the len of connections should be 9
-        # The value of connections means output of adder or inputs of gates is connected with input of adder or output of gates
-        # For example, digits = 2, gates.len = 3
-        # There will be 4 input of adder, and 3 outputs of gates
-        # So the valid value is [0, 7], 0 means connected with nothing, [1, 4] means connected with inputs of addr, [5, 7] means connected with outputs of gates
-        self.connections = connections
+        self.gate_connections = gate_connections
+        self.output_connections = output_connections
         self.score = 0
         self.name = str(uuid.uuid4())
         self.parent = ""
         self.generation = 0
         
-    def dfs(self, cache: List[str], input: str, index: int, history: Mapping[int,bool]) -> str:
-        # Index is output of adder or input of gates
-        # [0, digits] is output of adder, digits + 1 total
-        # [digits + 1, digits + 2 * len(gates)] is input of of gates
-        # If it connect to nothing, return 0
-        if self.connect_to_nothing(index):
+    def dfs(self, input1: str, input2: str, conn: connect, history: Mapping[int,bool]) -> str:
+        if self.connect_to_nothing(input1, input2, conn):
             return "0"
-        # If it is already calculated, return cache
-        if cache[index] != "":
-            return cache[index]
-        # Parent is what connect to it
-        parent = self.connections[index]
-        # If source is input of addr, return input directly
-        if parent <= self.digits * 2:
-            ret = input[parent-1]
-            cache[index] = ret
-            return ret
-        # If parent is output of gate, cal it recursive
-        # First, get index of source gate's input
-        # If digits is 4, source is 0, lets calculate each index mean
-        # 0 means nothing, 1-4 means input, 5 and 6 means input of first gate
-        gate_index = parent - self.digits * 2 - 1
-        if gate_index in history:
-            return "-1"
-        source_index1 = self.digits + 1 + gate_index * 2
-        source_index2 = source_index1 + 1
-        history[gate_index] = True
-        v1 = self.dfs(cache, input, source_index1, history)
-        v2 = self.dfs(cache, input, source_index2, history)
-        del history[gate_index]
-        out = "-1"
-        if v1 != "-1" and v2 != "-1":
-            out = self.gates[gate_index].cal(v1, v2)
-        cache[index] = out
-        return out
+        elif conn.get_type() == connect.type_input1:
+            return input1[-1 * conn.get_index() - 1]
+        elif conn.get_type() == connect.type_input2:
+            return input2[-1 * conn.get_index() - 1]
+        elif conn.get_type() == connect.type_gate:
+            index = conn.get_index()
+            if index in history:
+                return "-1"
+            history[index] = True
+            i1_conn = self.gate_connections[index][0]
+            i2_conn = self.gate_connections[index][1]
+            v1 = self.dfs(input1, input2, i1_conn, history)
+            v2 = self.dfs(input1, input2, i2_conn, history)
+            del history[index]
+            out = "-1"
+            if v1 != "-1" and v2 != "-1":
+                out = self.gates[index].cal(v1, v2)
+            return out
 
-    def connect_to_nothing(self, index):
-        return len(self.connections) < index + 1 or self.connections[index] == 0 or self.connections[index] > self.digits * 2 + len(self.gates)
+    def connect_to_nothing(self, input1: str, input2: str, conn: connect) -> bool:
+        index = conn.get_index()
+        if conn.get_type() == connect.type_none:
+            return True
+        elif conn.get_type() == connect.type_input1:
+            if index < 0 or index >= len(input1):
+                return True
+        elif conn.get_type() == connect.type_input2:
+            if index < 0 or index >= len(input2):
+                return True
+        elif conn.get_type() == connect.type_gate:
+            if index < 0 or index >= len(self.gates):
+                return True
+        return False
         
         
     def cal(self, i1: int, i2: int) -> int:
         # Format two input into a string
-        input = format(i1, f'0{self.digits}b') + format(i2, f'0{self.digits}b')
-        # Prepare list to fill in result
-        cache = ["" for _ in range(self.digits + 1 + len(self.gates) * 2)]
+        if len(self.output_connections) == 0:
+            return 0
+        input1 = format(i1, f'0b')
+        input2 = format(i2, f'0b')
+        
         res = ""
-        # Iterate through digits+1, to get all result
-        for i in range(self.digits + 1):
-            r = self.dfs(cache, input, i, {})
-            # If return -1, means there is loop, the result is invalid
+        # Iterate through output
+        for conn in self.output_connections:
+            r = self.dfs(input1, input2, conn, {})
             if r == "-1":
                 return -1
-            res += r
+            res = r + res
         return int(res, 2)
     
     def challenge(self, challengs: List[List[int]]):
@@ -101,68 +145,97 @@ class adder:
         return self.generation
     
     def involute(self, rate: float) -> 'adder':
-        new_one = adder(self.digits, self.gates.copy(), self.connections.copy())
+        new_one = adder(self.gates.copy(), copy.deepcopy(self.gate_connections), copy.deepcopy(self.output_connections))
         new_one.parent = self.name
         new_one.generation = self.generation + 1
         
-        # Involute add gates
-        involution_rate = rate
-        while random.random() < involution_rate:
-            involution_rate *= involution_rate
-            new_one.gates.append(gate.newRandomGate())
-            
-        # Involute del gates
-        involution_rate = rate
-        while random.random() < involution_rate and len(new_one.gates) > 0:
-            involution_rate *= involution_rate
-            del_index = random.randint(0, len(new_one.gates) - 1)
-            del new_one.gates[del_index]
-            del_val1 = 1 + 2 * new_one.digits + 2 * del_index
-            del_val2 = del_val1 + 1
-            for i in range(len(new_one.connections)):
-                if new_one.connections[i] in [del_val1, del_val2]:
-                    new_one.connections[i] = 0
-                elif new_one.connections[i] > del_val2:
-                    new_one.connections[i] -= 2
-            
-        # Ensure connetions length
-        count_connections = len(new_one.connections)
-        len_connections = new_one.digits + 2 * len(new_one.gates)
-        if count_connections < len_connections:
-            new_one.connections += [0] * (len_connections - count_connections)
-        elif count_connections > len_connections:
-            new_one.connections = new_one.connections[:len_connections]
-            
-        # Involute connections
-        max_val = 2 * new_one.digits + len(new_one.gates)
-        involution_rate = rate
-        while random.random() < involution_rate:
-            involution_rate *= involution_rate
-            new_one.connections[random.randint(0, len_connections-1)] = random.randint(0, max_val)
+        # Involute
+        while random.random() < rate:
+            if rate >= 0.99:
+                rate = 0.99
+            rate *= rate
+            r = random.random()
+            # Add gate
+            if r < 0.1:
+                new_one.gates.append(gate.newRandomGate())
+                gate_len = len(new_one.gates)
+                output_len = len(new_one.output_connections)
+                new_one.gate_connections.append([connect.new_random_connect(gate_len, output_len),
+                                                 connect.new_random_connect(gate_len, output_len)])
+            # Del gate
+            elif r < 0.2:
+                if len(new_one.gates) > 0:
+                    del_index = random.randint(0, len(new_one.gates) - 1)
+                    del new_one.gates[del_index]
+                    del new_one.gate_connections[del_index]
+                    for conn_pair in new_one.gate_connections:
+                        if conn_pair[0].get_type() == connect.type_gate:
+                            i0 = conn_pair[0].get_index()
+                            if i0 >= del_index:
+                                conn_pair[0].set_index(i0-1)
+                        if conn_pair[1].get_type() == connect.type_gate:
+                            i1 = conn_pair[1].get_index()
+                            if i1 >= del_index:
+                                conn_pair[1].set_index(i1-1)
+                    for conn in new_one.output_connections:
+                        if conn.get_type() == connect.type_gate:
+                            i = conn.get_index()
+                            if i >= del_index:
+                                conn.set_index(i-1)
+            # Alter gate type
+            elif r < 0.3:
+                if len(new_one.gates) > 0:
+                    alter_index = random.randint(0, len(new_one.gates) - 1)
+                    new_one.gates[alter_index] = gate.newRandomGate()
+            # Alter connection of gates
+            elif r < 0.8:
+                if len(new_one.gate_connections) > 0:
+                    alter_index = random.randint(0, len(new_one.gate_connections) - 1)
+                    left_right = random.randint(0,1)
+                    gate_len = len(new_one.gates)
+                    output_len = len(new_one.output_connections)
+                    new_one.gate_connections[alter_index][left_right] = connect.new_random_connect(gate_len, output_len)
+            else:
+                if len(new_one.output_connections) > 0:
+                    alter_index = random.randint(0, len(new_one.output_connections) - 1)
+                    gate_len = len(new_one.gates)
+                    output_len = len(new_one.output_connections)
+                    new_one.output_connections[alter_index] = connect.new_random_connect(gate_len, output_len)
+        
         return new_one
     
     def packJSON(self):
         gates = []
+        gate_connections = []
+        output_connections = []
         for g in self.gates:
-            gates.append(gate.packJSON(g))
+            gates.append(g.packJSON())
+        for c in self.gate_connections:
+            gate_connections.append([c[0].packJSON(), c[1].packJSON()])
+        for c in self.output_connections:
+            output_connections.append(c.packJSON())
         return {
             self.name_field_name: self.name,
             self.parent_field_name: self.parent,
             self.generation_field_name: self.generation,
-            self.digits_field_name: self.digits,
             self.score_field_name: self.score,
             "gate_len": len(self.gates),
             self.gates_feild_name: gates,
-            self.connection_field_name: self.connections,
+            self.gate_connection_field_name: gate_connections,
+            self.output_connection_field_name: output_connections,
         }
     
     def unpackJSON(d) -> 'adder':
-        digits = d[adder.digits_field_name]
         gates = []
+        gate_connections = []
+        output_connections = []
         for gate_data in d[adder.gates_feild_name]:
             gates.append(gate.unpackJSON(gate_data))
-        connections = d[adder.connection_field_name]
-        a =  adder(digits, gates, connections)
+        for conn_data in d[adder.gate_connection_field_name]:
+            gate_connections.append([connect.unpackJSON(conn_data[0]), connect.unpackJSON(conn_data[1])])
+        for conn_data in d[adder.output_connection_field_name]:
+            output_connections.append(connect.unpackJSON(conn_data))
+        a =  adder(gates, gate_connections, output_connections)
         a.score = d[adder.score_field_name]
         a.generation = d[adder.generation_field_name]
         a.name = d[adder.name_field_name]

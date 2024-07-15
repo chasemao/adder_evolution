@@ -28,10 +28,24 @@ class TestGate(unittest.TestCase):
         self.assertEqual(g.cal("1", "0"), "1")
         self.assertEqual(g.cal("0", "1"), "1")
         self.assertEqual(g.cal("0", "0"), "0")
+        
+    def text_left_gate(self):
+        g = gate(gate.type_left)
+        self.assertEqual(g.cal("1", "1"), "1")
+        self.assertEqual(g.cal("1", "0"), "1")
+        self.assertEqual(g.cal("0", "1"), "0")
+        self.assertEqual(g.cal("0", "0"), "0")
+    
+    def text_left_gate(self):
+        g = gate(gate.type_right)
+        self.assertEqual(g.cal("1", "1"), "1")
+        self.assertEqual(g.cal("1", "0"), "0")
+        self.assertEqual(g.cal("0", "1"), "1")
+        self.assertEqual(g.cal("0", "0"), "0")
 
     def test_invalid_gate_type(self):
         with self.assertRaises(ValueError):
-            g = gate(5)
+            g = gate(7)
             g.cal("1", "1")
 
 if __name__ == '__main__':

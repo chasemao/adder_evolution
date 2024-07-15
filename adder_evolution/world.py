@@ -4,8 +4,7 @@ import json
 import math
 import random
 import time
-from adder_evolution.gate import gate
-from adder_evolution.adder import adder
+from adder_evolution.adder import adder, connect
 
 class world:
     generation_field_name = "generation"
@@ -17,7 +16,10 @@ class world:
     
     def __init__(self, digits: int, max_adders: int, birth_rate: float, invloute_rate: float, save_interval: int, save_file: str = ""):
         generation = 0
-        adders = [adder(digits,[],[])]
+        output_connections = []
+        for _ in range(digits+1):
+            output_connections.append(connect(connect.type_none, 0))
+        adders = [adder([],[],output_connections)]
         if save_file != "":
             current_dir = os.path.dirname(os.path.abspath(__file__))
             f = os.path.join(current_dir, save_file)
@@ -53,8 +55,8 @@ class world:
                 res.append([i,j,o])
         return res
 
-    def give_birth(self, addvantage: int) -> int:
-        rate = self.birth_rate + 0.1 * float(addvantage)
+    def give_birth(self, advantage: int) -> int:
+        rate = self.birth_rate + 0.2 * float(advantage)
         base = math.floor(rate)
         base_rate = base + 1 - rate
         return random.choices([base, base + 1], [base_rate, 1 - base_rate])[0]
@@ -77,13 +79,12 @@ class world:
                     self.adders.append(one_adder.involute(self.involute_rate))
                     
             # Some die
-            challenge_results = []
             for one_adder in self.adders:
                 one_adder.challenge(self.challanges)
-            self.adders = sorted(self.adders, key=lambda x: (self.advantage(x), x.get_generation()), reverse=True)
+            self.adders = sorted(self.adders,
+                                 key=lambda x: (self.advantage(x), x.get_generation()), reverse=True)
             if len(self.adders) > self.max_adders:
                 self.adders = self.adders[:self.max_adders]
-                challenge_results = challenge_results[:self.max_adders]
             
             # Print log
             self.generation += 1
@@ -101,7 +102,8 @@ class world:
             data = {
                 self.generation_field_name: self.generation,
                 self.digits_field_name: self.digits,
-                self.max_adders_field_name: self.max_adders,self.birth_rate_field_name: self.birth_rate,
+                self.max_adders_field_name: self.max_adders,
+                self.birth_rate_field_name: self.birth_rate,
                 self.involute_rate_field_name: self.involute_rate,
                 "adder_len": len(self.adders),
                 self.adders_field_name: [],                
@@ -112,6 +114,5 @@ class world:
             directory = os.path.join(current_dir, '../save')
             os.makedirs(directory, exist_ok=True)
             file_path = os.path.join(directory, str(self.generation) + ".json")
-            # Write JSON data to the file
             with open(file_path, 'w') as json_file:
                 json.dump(data, json_file, indent=4)
