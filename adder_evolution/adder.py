@@ -2,13 +2,16 @@ from typing import List, Mapping
 import random
 import uuid
 import copy
+import os
 from adder_evolution.gate import gate
+import pygraphviz as pgv
 
 class connect:
     type_none = 0
     type_input1 = 1
     type_input2 = 2
     type_gate = 3
+    type_output = 4
     
     type_field_name = "type"
     index_field_name = "index"
@@ -26,24 +29,13 @@ class connect:
     def set_index(self, index: int):
         self.index = index
         
-    def new_random_connect(gate_len: int, output_len: int) -> "connect":
-        n = random.random()
-        if n < 0.25:
-            return connect(connect.type_none, 0)
-        elif n < 0.5:
-            return connect(connect.type_input1, random.randint(0, max(0,output_len-1)))
-        elif n < 0.75:
-            return connect(connect.type_input2, random.randint(0, max(0,output_len-1)))
-        else:
-            return connect(connect.type_gate, random.randint(0, max(0,gate_len-1)))
-        
     def packJSON(self):
         return {
             connect.type_field_name: self.type,
             connect.index_field_name: self.index,
         }
         
-    def unpackJSON(self, d) -> "connect":
+    def unpackJSON(d) -> "connect":
         return connect(d[connect.type_field_name], d[connect.index_field_name])
         
         
@@ -75,7 +67,7 @@ class adder:
         self.generation = 0
         
     def dfs(self, input1: str, input2: str, conn: connect, history: Mapping[int,bool]) -> str:
-        if self.connect_to_nothing(input1, input2, conn):
+        if self.connect_to_nothing(len(input1), len(input2), conn):
             return "0"
         elif conn.get_type() == connect.type_input1:
             return input1[-1 * conn.get_index() - 1]
@@ -96,15 +88,15 @@ class adder:
                 out = self.gates[index].cal(v1, v2)
             return out
 
-    def connect_to_nothing(self, input1: str, input2: str, conn: connect) -> bool:
+    def connect_to_nothing(self, input1_len: int, input2_len: int, conn: connect) -> bool:
         index = conn.get_index()
         if conn.get_type() == connect.type_none:
             return True
         elif conn.get_type() == connect.type_input1:
-            if index < 0 or index >= len(input1):
+            if index < 0 or index >= input1_len:
                 return True
         elif conn.get_type() == connect.type_input2:
-            if index < 0 or index >= len(input2):
+            if index < 0 or index >= input2_len:
                 return True
         elif conn.get_type() == connect.type_gate:
             if index < 0 or index >= len(self.gates):
@@ -144,12 +136,12 @@ class adder:
     def get_generation(self) -> int:
         return self.generation
     
-    def involute(self, rate: float) -> 'adder':
+    def mutate(self, rate: float) -> 'adder':
         new_one = adder(self.gates.copy(), copy.deepcopy(self.gate_connections), copy.deepcopy(self.output_connections))
         new_one.parent = self.name
         new_one.generation = self.generation + 1
         
-        # Involute
+        # Mutate
         while random.random() < rate:
             if rate >= 0.99:
                 rate = 0.99
@@ -158,10 +150,7 @@ class adder:
             # Add gate
             if r < 0.1:
                 new_one.gates.append(gate.newRandomGate())
-                gate_len = len(new_one.gates)
-                output_len = len(new_one.output_connections)
-                new_one.gate_connections.append([connect.new_random_connect(gate_len, output_len),
-                                                 connect.new_random_connect(gate_len, output_len)])
+                new_one.gate_connections.append([self.new_random_connect(), self.new_random_connect()])
             # Del gate
             elif r < 0.2:
                 if len(new_one.gates) > 0:
@@ -192,15 +181,11 @@ class adder:
                 if len(new_one.gate_connections) > 0:
                     alter_index = random.randint(0, len(new_one.gate_connections) - 1)
                     left_right = random.randint(0,1)
-                    gate_len = len(new_one.gates)
-                    output_len = len(new_one.output_connections)
-                    new_one.gate_connections[alter_index][left_right] = connect.new_random_connect(gate_len, output_len)
+                    new_one.gate_connections[alter_index][left_right] = self.new_random_connect()
             else:
                 if len(new_one.output_connections) > 0:
                     alter_index = random.randint(0, len(new_one.output_connections) - 1)
-                    gate_len = len(new_one.gates)
-                    output_len = len(new_one.output_connections)
-                    new_one.output_connections[alter_index] = connect.new_random_connect(gate_len, output_len)
+                    new_one.output_connections[alter_index] = self.new_random_connect()
         
         return new_one
     
@@ -241,3 +226,69 @@ class adder:
         a.name = d[adder.name_field_name]
         a.parent = d[adder.parent_field_name]
         return a
+    
+    def draw(self, output_path: str=""):
+        G = pgv.AGraph(directed=True)
+        output_len = len(self.output_connections)
+        for i in range(output_len-1):
+            G.add_node(self.get_node_name(connect.type_input1, i), color="red")
+        for i in range(output_len-1):
+            G.add_node(self.get_node_name(connect.type_input2, i), color="orange")
+        for i in range(len(self.gates)):
+            G.add_node(self.get_node_name(connect.type_gate, i), color="blue")
+        for i in range(output_len):
+            G.add_node(self.get_node_name(connect.type_output, i), color="green")
+        for i, conn_pair in enumerate(self.gate_connections):
+            for ci, conn in enumerate(conn_pair):
+                if self.connect_to_nothing(output_len-1, output_len-1, conn):
+                    continue
+                label = "left"
+                if ci == 1:
+                    label = "right"
+                G.add_edge(self.get_node_name(conn.get_type(), conn.get_index()), self.get_node_name(connect.type_gate, i), label=label)
+        for i in range(output_len):
+            conn = self.output_connections[i]
+            if self.connect_to_nothing(output_len-1, output_len-1, conn):
+                    continue
+            G.add_edge(self.get_node_name(conn.get_type(), conn.get_index()), self.get_node_name(connect.type_output, i))
+        G.layout("dot")
+        if output_path == "":
+            current_dir = os.path.dirname(os.path.abspath(__file__))
+            output_path = os.path.join(current_dir, '../save')
+        os.makedirs(output_path, exist_ok=True)
+        file_path = os.path.join(output_path, f"[{self.generation}]{self.name}.png")
+        G.draw(file_path)
+        
+        
+    def get_node_name(self, type: int, index: int):
+        if type == connect.type_input1:
+            return f"input1[{index}]"
+        elif type == connect.type_input2:
+            return f"input2[{index}]"
+        elif type == connect.type_gate:
+            return f"gate[{index}]({self.gates[index].get_type_desc()})"
+        elif type == connect.type_output:
+            return f"output[{index}]"
+        else:
+            return "unknown"
+        
+    def ensure_digits(self, digits: int):
+        dest = digits + 1
+        if len(self.output_connections) >= dest:
+            self.output_connections = self.output_connections[:dest]
+        else:
+            for _ in range(dest - len(self.output_connections)):
+                self.output_connections.append(self.new_random_connect())
+                
+    def new_random_connect(self) -> connect:
+        gate_len = len(self.gates)
+        output_len = len(self.output_connections)
+        n = random.random()
+        if n < 0.25:
+            return connect(connect.type_none, 0)
+        elif n < 0.5:
+            return connect(connect.type_input1, random.randint(0, max(0,output_len-1)))
+        elif n < 0.75:
+            return connect(connect.type_input2, random.randint(0, max(0,output_len-1)))
+        else:
+            return connect(connect.type_gate, random.randint(0, max(0,gate_len-1)))

@@ -88,16 +88,16 @@ class TestAdder(unittest.TestCase):
         a = adder([gate(gate.type_and)], [[connect(connect.type_gate, 0), connect(connect.type_gate, 1)]], [connect(connect.type_gate, 0)])
         self.assertEqual(a.cal(1, 1), -1)
         
-    def test_involute_none(self):
+    def test_mutate_none(self):
         a = adder([], [], [])
-        a.involute(0.99)
+        a.mutate(0.99)
         
-    def test_involute(self):
+    def test_mutate(self):
         a = adder([gate(gate.type_and)],
                   [[connect(connect.type_input1,0), connect(connect.type_input2,0)]],
                   [connect(connect.type_input1,0), connect(connect.type_input2,0), 
                    connect(connect.type_gate, 0)])
-        a.involute(0.99).packJSON()
+        a.mutate(0.99).packJSON()
 
 if __name__ == '__main__':
     unittest.main()

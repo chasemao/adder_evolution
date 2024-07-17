@@ -41,6 +41,26 @@ class gate:
                 return "1"
             else:
                 return "0"
+            
+    def get_type(self) -> int:
+        return self.type
+    
+    def get_type_desc(self) -> str:
+        t = self.type
+        if t == self.type_and:
+            return "and"
+        elif t == self.type_or:
+            return "or"
+        elif t == self.type_not:
+            return "not"
+        elif t == self.type_xor:
+            return "xor"
+        elif t == self.type_left:
+            return "left"
+        elif t == self.type_right:
+            return "right"
+        else:
+            return "unknown"
     
     def newRandomGate() -> 'gate':
         return gate(random.choices([gate.type_and, gate.type_or, gate.type_not, gate.type_xor,
