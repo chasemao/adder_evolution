@@ -11,7 +11,7 @@ By running world and drawing adder, you can get a adder from scratchlike below.
 
 ![adder_example](./adder_example.png)
 
-More detailed thought about how to design and develop this project can be found in my [blog](https://chasemao.com/article/Adder-Evolution).
+More detailed thought about how to design and develop this project can be found in my [blog](https://chasemao.com/article/adder-evolution).
 
 ## Installation
 
